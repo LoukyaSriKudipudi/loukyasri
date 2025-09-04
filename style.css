@@ -46,7 +46,10 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: grid;
+  gap: 1.5rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 /* ---------- Header ---------- */
@@ -252,4 +255,63 @@ footer {
 
 section {
   scroll-margin-top: 80px;
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+    background: white !important;
+    color: black !important;
+    line-height: 1.5;
+  }
+
+  nav,
+  header,
+  .hamburger,
+  .sidebar,
+  .footer,
+  footer {
+    display: none;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #f0f4ff, #fdfdfd);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* section {
+    page-break-before: always;
+    break-inside: avoid;
+  } */
+
+  /* .grid {
+    display: block !important;
+  } */
+
+  .card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .percentage {
+    display: block !important;
+  }
+
+  a::after {
+    content: ' (' attr(href) ')';
+  }
+}
+
+@page {
+  size: A4 portrait;
+  margin: 1.5cm;
 }
