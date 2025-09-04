@@ -4,462 +4,382 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loukya Sri Kudipudi - Portfolio</title>
-    <style>
-      :root {
-        --bg: #f8f9fa;
-        --card: #ffffff;
-        --text: #222;
-        --muted: #666;
-        --primary: #2563eb;
-        --radius: 12px;
-      }
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: system-ui, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
-      a {
-        color: var(--primary);
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-
-      header {
-        position: sticky;
-        top: 0;
-        background: #fff;
-        border-bottom: 1px solid #ddd;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        z-index: 1000;
-      }
-      header h1 {
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
-      header nav a {
-        margin-left: 1.5rem;
-        color: var(--text);
-        font-size: 0.9rem;
-      }
-      section {
-        max-width: 1000px;
-        margin: auto;
-        padding: 4rem 2rem;
-      }
-      section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-      }
-      section p.subtitle {
-        color: var(--muted);
-        margin-bottom: 2rem;
-      }
-
-      .hero {
-        text-align: center;
-        padding: 6rem 2rem;
-        background: linear-gradient(to right, #f0f4ff, #fdfdfd);
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-        margin-top: 0.5rem;
-      }
-      .hero p.role {
-        font-size: 1.3rem;
-        color: var(--muted);
-      }
-      .hero .tagline {
-        margin-top: 0.5rem;
-        font-size: 1.1rem;
-      }
-      .hero .buttons {
-        margin-top: 1.5rem;
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .btn {
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        font-size: 0.9rem;
-        border: 1px solid var(--primary);
-        background: var(--primary);
-        color: #fff;
-        transition: all 0.2s;
-      }
-      .btn.outline {
-        background: transparent;
-        color: var(--primary);
-      }
-      .btn:hover {
-        opacity: 0.9;
-      }
-
-      .grid {
-        display: grid;
-        gap: 1.5rem;
-      }
-      .grid-2 {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      }
-      .grid-3 {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
-
-      .card {
-        background: var(--card);
-        padding: 1.5rem;
-        border-radius: var(--radius);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-        transition: transform 0.2s;
-      }
-      .card:hover {
-        transform: translateY(-4px);
-      }
-      .card h3 {
-        margin-bottom: 0.5rem;
-      }
-      ul {
-        padding-left: 1.2rem;
-      }
-      ul li {
-        margin-bottom: 0.5rem;
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        border-top: 1px solid #ddd;
-        color: var(--muted);
-      }
-      #visitBtn {
-        display: block;
-        text-align: center;
-        margin-top: 2rem;
-      }
-
-      .card p:nth-of-type(2) {
-        margin-bottom: 1rem;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <h1>Loukya Sri Kudipudi</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="container header-content">
+        <div class="title-container">
+          <h1 class="logo">Loukya Sri Kudipudi</h1>
+          <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+        </div>
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero">
-      <p>Hyderabad, India</p>
-      <h1>Loukya Sri Kudipudi</h1>
-      <p class="role">Full-Stack Developer</p>
-      <p class="tagline">Secure systems • Clean APIs • Practical tools</p>
-      <div class="buttons">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn outline" href="mailto:loukyasrikudipudi@gmail.com"
-          >Email</a
-        >
+      <div class="container">
+        <p class="location">Hyderabad, India</p>
+        <h1 class="name">Loukya Sri Kudipudi</h1>
+        <p class="role">Full-Stack Developer</p>
+        <p class="tagline">Secure systems • Clean APIs • Practical tools</p>
+        <div class="buttons">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="mailto:loukyasrikudipudi@gmail.com" class="btn outline"
+            >Email</a
+          >
+        </div>
       </div>
     </section>
 
+    <!-- About -->
     <section id="about">
-      <h2>About</h2>
-      <p class="subtitle">Who I am and what I value</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Career Objective</h3>
-          <p>
-            Seeking an IT role where I can apply my experience in Computer
-            System Validation (CSV/ESV) and technical skills in MS Excel,
-            JavaScript, and system troubleshooting to ensure compliance,
-            efficiency, and reliability.
-          </p>
+      <div class="container">
+        <h2>About</h2>
+        <p class="subtitle">Who I am and what I value</p>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Career Objective</h3>
+            <p>
+              Full-Stack Developer with expertise in Node.js, secure data
+              handling (AES-256-GCM, JWT), API design, and automation tools
+              (Telegram bots, AWS S3). I combine my background in system
+              validation with modern development skills to deliver efficient,
+              secure, and impactful software solutions.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Strengths</h3>
+            <ul>
+              <li>
+                Strong logical thinking with ability to identify inconsistencies
+                and system flaws
+              </li>
+              <li>Practical experience in software validation</li>
+              <li>Broad understanding of system-level troubleshooting</li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <p class="subtitle">Technologies and tools I work with</p>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Core</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Systems / Deployment</h3>
+            <ul>
+              <li>Linux Server Management</li>
+              <li>Nginx</li>
+              <li>PM2</li>
+              <li>Certbot</li>
+              <li>CLI</li>
+              <li>AWS S3 (Data Storage)</li>
+              <li>Node.js Backend Deployment</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Tools</h3>
+            <ul>
+              <li>Git</li>
+              <li>Github</li>
+              <li>MS Excel</li>
+              <li>MS Word</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Lightroom</li>
+              <li>PDF Tools</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Specializations</h3>
+            <ul>
+              <li>RESTful API Development</li>
+              <li>Authentication Systems (JWT, session handling)</li>
+              <li>Data Encryption & Security (AES-256-GCM, crypto)</li>
+              <li>File Upload & Management (Multer, AWS S3)</li>
+              <li>Email Automation (Nodemailer)</li>
+              <li>Telegram Bot Development (Telegraf.js)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>System Administration</h3>
+            <ul>
+              <li>Windows (Install / Troubleshoot / Config)</li>
+              <li>Basic Linux</li>
+              <li>CLI</li>
+              <li>Disk Management</li>
+              <li>BIOS/UEFI</li>
+              <li>Device Manager</li>
+              <li>Software Installation</li>
+              <li>Driver Setup</li>
+              <li>Patch Updates</li>
+              <li>Antivirus Setup</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <p class="subtitle">A selection of my recent work</p>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>BrightSpark Hire Website</h3>
+            <p>
+              <em>Hospitality jobs & training for Indian students in the UK</em>
+            </p>
+            <p>
+              A production website for a UK startup. Lightweight UI (&lt;800kb),
+              SEO-optimized with 8 content pages, delivering excellent
+              Lighthouse scores.
+            </p>
+            <p>
+              <strong>Tech:</strong> HTML, CSS, JavaScript, Node.js, Nginx,
+              Linux Server
+            </p>
+            <a href="https://brightsparkhire.com/" target="_blank" class="btn"
+              >Visit</a
+            >
+          </div>
+          <div class="card">
+            <h3>Location Saver</h3>
+            <p><em>Save, share & track locations with real-time alerts</em></p>
+            <p>
+              Creates short links with analytics (IP, GPS, device info) and
+              sends instant Telegram notifications.
+            </p>
+            <p>
+              <strong>Tech:</strong> Node.js, Express, MongoDB, JWT, Telegraf
+            </p>
+            <a
+              href="https://location.loukyasri.pro/"
+              target="_blank"
+              class="btn"
+              >Demo</a
+            >
+          </div>
+          <div class="card">
+            <h3>Vault X</h3>
+            <p><em>Secure vault for digital secrets (AES-256-GCM)</em></p>
+            <p>
+              Encrypted data storage with CRUD, search, pagination, and account
+              management.
+            </p>
+            <p>
+              <strong>Tech:</strong> Node.js, Express, MongoDB, Crypto, JWT, AWS
+              S3
+            </p>
+            <a href="https://vaultx.loukyasri.pro/" target="_blank" class="btn"
+              >Demo</a
+            >
+          </div>
+          <div class="card">
+            <h3>Crypto</h3>
+            <p><em>Encrypt & decrypt any file or text (AES-256-GCM)</em></p>
+            <p>
+              Supports MP4, PDF, DOCX, images, and text. User provides their own
+              key; no files or keys are stored.
+            </p>
+            <p>
+              <strong>Tech:</strong> Node.js, Express, Crypto, Multer, Nginx,
+              Linux
+            </p>
+            <a href="https://crypto.loukyasri.pro/" target="_blank" class="btn"
+              >Demo</a
+            >
+          </div>
+        </div>
+
+        <h3 class="mini-title">Mini Projects</h3>
+        <div class="grid grid-3">
+          <div class="card">
+            <h4>Video Downloader</h4>
+            <p>
+              Download Twitter, YouTube, Facebook, Instagram videos / Only
+              audio.
+            </p>
+            <p><strong>Tech:</strong> Node.js, CLI</p>
+            <a href="https://video.loukyasri.pro/" target="_blank" class="btn"
+              >Visit</a
+            >
+          </div>
+          <div class="card">
+            <h4>Text Editor</h4>
+            <p>Lightweight editor with save, download results to txt file.</p>
+            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <a href="https://teditor.loukyasri.pro/" target="_blank" class="btn"
+              >Visit</a
+            >
+          </div>
+          <div class="card">
+            <h4>Palindrome Checker</h4>
+            <p>
+              Check if any word, phrase, or number is a palindrome instantly.
+            </p>
+            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <a
+              href="https://palindromecheckingapp.netlify.app/"
+              target="_blank"
+              class="btn"
+              >Visit</a
+            >
+          </div>
+          <div class="card">
+            <h4>Letter Breakdown</h4>
+            <p>Analyze text character by character with counts & breakdown.</p>
+            <p><strong>Tech:</strong> JavaScript</p>
+            <a
+              href="https://letterbreakdown.netlify.app/"
+              target="_blank"
+              class="btn"
+              >Visit</a
+            >
+          </div>
+          <div class="card">
+            <h4>Cosmic Truths</h4>
+            <p>Random cosmic and philosophical truths with a minimal UI.</p>
+            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <a
+              href="https://cosmictruths.netlify.app/"
+              target="_blank"
+              class="btn"
+              >Visit</a
+            >
+          </div>
+          <div class="card">
+            <h4>To-Do App</h4>
+            <p>Simple, clean to-do app to track daily tasks.</p>
+            <p><strong>Tech:</strong> JavaScript</p>
+            <a
+              href="https://todoloukyasri.netlify.app/"
+              target="_blank"
+              class="btn"
+              >Visit</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <p class="subtitle">Where I've applied my skills</p>
         <div class="card">
-          <h3>Strengths</h3>
+          <h3>Validation Engineer</h3>
+          <p>
+            <strong>Company:</strong> Daicel (through Avanteva Solutions Pvt.
+            Ltd.)
+          </p>
+          <p><strong>Period:</strong> Nov 2021 – Feb 2023</p>
           <ul>
             <li>
-              Strong logical thinking with the ability to identify
-              inconsistencies and system flaws
+              Performed Excel Software Validation (ESV) per 21 CFR Part 11 &
+              GAMP5
             </li>
-            <li>Practical experience in software validation</li>
-            <li>Broad understanding of system-level troubleshooting</li>
+            <li>Validated and maintained data integrity for Excel templates</li>
+            <li>Authored/executed IQ, OQ, PQ; collaborated with QA & IT</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <p class="subtitle">Technologies and tools I work with</p>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Core</h3>
-          <p>HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB</p>
-        </div>
-        <div class="card">
-          <h3>Systems / Deployment</h3>
-          <p>
-            Linux Server Management, Nginx, CLI, Node.js Backend, Deployment
-          </p>
-        </div>
-        <div class="card">
-          <h3>Tools</h3>
-          <p>
-            Git, MS Excel, MS Word, Adobe Photoshop, Adobe Lightroom, PDF Tools
-          </p>
-        </div>
-        <div class="card">
-          <h3>Systems</h3>
-          <ul>
-            Windows (Install / Troubleshoot / Config), Basic Linux, CLI, Disk
-            Management, BIOS/UEFI, Device Manager, Software Installation, Driver
-            Setup, Patch Updates, Antivirus Setup,
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <p class="subtitle">A selection of my recent work</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>BrightSpark Hire Website</h3>
-          <p>
-            <em>Hospitality jobs & training for Indian students in the UK</em>
-          </p>
-          <p>
-            A production website for a UK startup. Lightweight UI (<800kb),
-            SEO-optimized with 8 content pages, delivering excellent Lighthouse
-            scores.
-          </p>
-          <p>
-            <strong>Tech:</strong> HTML, CSS, JavaScript, Node.js, Nginx, Linux
-            Server
-          </p>
-          <a
-            id="visitBtn"
-            class="btn"
-            href="https://brightsparkhire.com/"
-            target="_blank"
-            >Visit</a
-          >
-        </div>
-
-        <div class="card">
-          <h3>Location Saver</h3>
-          <p><em>Save, share & track locations with real-time alerts</em></p>
-          <p>
-            Creates short links with analytics (IP, GPS, device info) and sends
-            instant Telegram notifications.
-          </p>
-          <p>
-            <strong>Tech:</strong> Node.js, Express, MongoDB, JSON Web Token,
-            Telegraf, Telegram Bot API
-          </p>
-          <a
-            id="visitBtn"
-            class="btn"
-            href="https://location.loukyasri.pro/"
-            target="_blank"
-            >Demo</a
-          >
-        </div>
-
-        <div class="card">
-          <h3>Vault X</h3>
-          <p><em>Secure vault for digital secrets (AES-256-GCM)</em></p>
-          <p>
-            Encrypted data storage with CRUD, search, pagination, and account
-            management.
-          </p>
-          <p>
-            <strong>Tech:</strong> Node.js, Express, MongoDB, Crypto, JWT, AWS
-            S3
-          </p>
-          <a
-            id="visitBtn"
-            class="btn"
-            href="https://vaultx.loukyasri.pro/"
-            target="_blank"
-            >Demo</a
-          >
-        </div>
-
-        <div class="card">
-          <h3>Crypto</h3>
-          <p><em>Encrypt & decrypt any file or text (AES-256-GCM)</em></p>
-          <p>
-            Supports MP4, PDF, DOCX, images, and text. User provides their own
-            key; no files or keys are stored.
-          </p>
-          <p>
-            <strong>Tech:</strong> Node.js, Express, Crypto, Multer, Nginx,
-            Linux
-          </p>
-          <a
-            id="visitBtn"
-            class="btn"
-            href="https://crypto.loukyasri.pro/"
-            target="_blank"
-            >Demo</a
-          >
-        </div>
-      </div>
-
-      <h3 style="margin-top: 3rem">Mini Projects</h3>
-      <div class="grid grid-3" style="margin-top: 1rem">
-        <div class="card">
-          <h4>Video Downloader</h4>
-          <p>
-            Can Download Twitter, YouTube, Facebook, Instagram videos / Only
-            audio.
-          </p>
-          <p><strong>Tech:</strong> Node.js, CLI</p>
-          <a class="btn" href="https://video.loukyasri.pro/" target="_blank"
-            >Visit</a
-          >
-        </div>
-
-        <div class="card">
-          <h4>Text Editor</h4>
-          <p>Lightweight editor with save, download results to txt file.</p>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-          <a class="btn" href="https://teditor.loukyasri.pro/" target="_blank"
-            >Visit</a
-          >
-        </div>
-
-        <div class="card">
-          <h4>Palindrome Checker</h4>
-          <p>Check if any word, phrase, or number is a palindrome instantly.</p>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-          <a
-            class="btn"
-            href="https://palindromecheckingapp.netlify.app/"
-            target="_blank"
-            >Visit</a
-          >
-        </div>
-
-        <div class="card">
-          <h4>Letter Breakdown</h4>
-          <p>Analyze text character by character with counts & breakdown.</p>
-          <p><strong>Tech:</strong> JavaScript</p>
-          <a
-            class="btn"
-            href="https://letterbreakdown.netlify.app/"
-            target="_blank"
-            >Visit</a
-          >
-        </div>
-
-        <div class="card">
-          <h4>Cosmic Truths</h4>
-          <p>Random cosmic and philosophical truths with a minimal UI.</p>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-          <a
-            class="btn"
-            href="https://cosmictruths.netlify.app/"
-            target="_blank"
-            >Visit</a
-          >
-        </div>
-
-        <div class="card">
-          <h4>To-Do App</h4>
-          <p>Simple, clean to-do app to track daily tasks.</p>
-          <p><strong>Tech:</strong> JavaScript</p>
-          <a
-            class="btn"
-            href="https://todoloukyasri.netlify.app/"
-            target="_blank"
-            >Visit</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <p class="subtitle">Where I've applied my skills</p>
-      <div class="card">
-        <h3>Validation Engineer</h3>
-        <p>
-          <strong>Company:</strong> Daicel (through Avanteva Solutions Pvt.
-          Ltd.)
-        </p>
-        <p><strong>Period:</strong> Nov 2021 – Feb 2023</p>
-        <ul>
-          <li>
-            Performed Excel Software Validation (ESV) per 21 CFR Part 11 & GAMP5
-          </li>
-          <li>Validated and maintained data integrity for Excel templates</li>
-          <li>Authored/executed IQ, OQ, PQ; collaborated with QA & IT</li>
-        </ul>
-      </div>
-    </section>
-
+    <!-- Education -->
     <section id="education">
-      <h2>Education</h2>
-      <p class="subtitle">My academic background</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>B.Sc (Mathematics, Physics, Computer Science)</h3>
-          <p>Vasundara Degree College, Moula-Ali, Secunderabad</p>
-        </div>
-        <div class="card">
-          <h3>Intermediate (Mathematics, Physics, Chemistry)</h3>
-          <p>Government Junior College, Neredmet, Secunderabad</p>
-        </div>
-        <div class="card">
-          <h3>SSC (10th Standard)</h3>
-          <p>Zilla Praja Parishad High School, East Godavari</p>
+      <div class="container">
+        <h2>Education</h2>
+        <p class="subtitle">My academic background</p>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>B.Sc (Mathematics, Physics, Computer Science)</h3>
+            <p>Vasundara Degree College, Moula-Ali, Secunderabad</p>
+          </div>
+          <div class="card">
+            <h3>Intermediate (Mathematics, Physics, Chemistry)</h3>
+            <p>Government Junior College, Neredmet, Secunderabad</p>
+          </div>
+          <div class="card">
+            <h3>SSC (10th Standard)</h3>
+            <p>Zilla Praja Parishad High School, East Godavari</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
-      <h2>Contact</h2>
-      <p class="subtitle">Let’s build something together</p>
-      <div class="card">
-        <p><strong>Name:</strong> Loukya Sri Kudipudi</p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:loukyasrikudipudi@gmail.com"
-            >loukyasrikudipudi@gmail.com</a
-          >
-        </p>
-        <p><strong>Location:</strong> Hyderabad, India</p>
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="subtitle">Let’s build something together</p>
+        <div class="card">
+          <p><strong>Name:</strong> Loukya Sri Kudipudi</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:loukyasrikudipudi@gmail.com"
+              >loukyasrikudipudi@gmail.com</a
+            >
+          </p>
+          <p><strong>Location:</strong> Hyderabad, India</p>
+        </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-      © <span id="year"></span> Loukya Sri Kudipudi. All rights reserved.
+      <p>© <span id="year"></span> Loukya Sri Kudipudi. All rights reserved.</p>
     </footer>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+
+        navLinks.addEventListener('click', () => {
+          navLinks.classList.remove('show');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            navLinks.classList.remove('show');
+          }
+        });
+      });
     </script>
   </body>
 </html>
